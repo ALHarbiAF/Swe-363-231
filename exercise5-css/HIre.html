@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire me</title>
+    <style>
+         * {
+            color: var(--text-color, #252B42);
+            font-family: Montserrat;
+            font-size: 20.491px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 38.421px; 
+            letter-spacing: 0.128px;
+            text-transform: capitalize;
+        }
+      
+        body {
+            background-color: #ffffff; 
+            color: #FFF;
+            /* Inserted CSS */
+            color: var(--text-color, #252B42);
+            font-family: Montserrat;
+            font-size: 20.491px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 38.421px;
+            letter-spacing: 0.128px;
+            text-transform: capitalize;
+        }
+
+        a{
+            background-color: #ffffff;
+            color: rgb(0, 0, 0); 
+            text-decoration: none; 
+        }
+
+        input, textarea, datalist {
+            background-color: hsl(0, 0%, 100%); 
+            color: #000000;
+            border: 1px solid #555; 
+        }
+
+        ::placeholder {
+            color: #ffffff; 
+        }
+    </style>
+</head>
+<body>
+    
+    <article>
+    <form action="thank-you.html" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email">
+        <br>
+        <label for="skills">Skills:</label>
+        <input list="skills-list" name="skills" id="skills" placeholder="Select a skill">
+        <datalist id="skills-list">
+            <option value="Web Development">
+            <option value="Machine Learning">
+            <option value="UX Design">
+        </datalist>
+        <br>
+        <label for="portfolio">Portfolio Link:</label>
+        <input type="url" id="portfolio" name="portfolio" placeholder="Enter your portfolio link">
+        <br>
+        <label for="comments">Why should we hire you?</label>
+        <br>
+        <textarea id="comments" name="comments"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    </article>
+    <footer>
+        <nav>
+            <button><a href="main.html">Go back!</a></button>
+        </nav>
+        <p>Contact info: constulting@HarbiCo.com | Phone: (966) 500000000</p>
+        <p>&copy; 2023 HarbiConstultingCo. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
