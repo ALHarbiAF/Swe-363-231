@@ -1,4 +1,4 @@
-// Variables to keep track of the game state
+
 let turn = "X";
 let gameEnded = false;
 let cellValues = Array(9).fill(null);
@@ -6,9 +6,9 @@ let cellValues = Array(9).fill(null);
 // Utility functions
 function checkWinner() {
     const winningCombinations = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
-        [0, 4, 8], [2, 4, 6]             // Diagonals
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], 
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+        [0, 4, 8], [2, 4, 6]            
     ];
 
     for (let combo of winningCombinations) {
@@ -39,12 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
         let cell = event.target;
         let index = Array.from(cells).indexOf(cell);
 
-        if (cellValues[index] !== null) return;  // This cell is already filled.
+        if (cellValues[index] !== null) return;  
 
         cell.innerText = turn;
         cellValues[index] = turn;
-        cell.style.backgroundColor = turn === "X" ? "#ADD8E6" : "#90EE90";  // Change color based on player
-
+        cell.style.backgroundColor = turn === "X" ? "#ADD8E6" : "#90EE90";  
         if (!checkWinner()) {
             if (checkDraw()) {
                 document.getElementById("turn").innerText = "Draw!";
